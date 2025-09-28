@@ -1,0 +1,24 @@
+{
+  "name": "shrondajeanine-company",
+  "version": "1.0.0",
+  "description": "Holistic wellness coaching and community action program serving homeless and underserved individuals and families in Phoenix, Arizona.",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8080",
+    "dev": "npx live-server --port=8080"
+  },
+  "keywords": [
+    "wellness",
+    "coaching",
+    "community",
+    "healing",
+    "arizona",
+    "phoenix"
+  ],
+  "author": "Shronda Jeanine & Company",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
+  }
+}
