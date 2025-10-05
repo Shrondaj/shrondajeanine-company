@@ -145,6 +145,13 @@ a:hover {
     width: auto;
 }
 
+.brand-ampersand {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.3em;
+    margin: 0 0.15em;
+    color: var(--accent-color);
+}
+
 .brand-text {
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
@@ -555,9 +562,13 @@ section {
 
 .footer-content {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 3rem;
     margin-bottom: 2rem;
+}
+
+.footer-about {
+    grid-column: 1 / 2;
 }
 
 .footer-brand {
@@ -590,6 +601,10 @@ section {
 .footer-brand h3 {
     color: var(--white);
     margin: 0;
+}
+
+.footer-brand h3 .brand-ampersand {
+    color: var(--accent-color);
 }
 
 .footer-section p {
