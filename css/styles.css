@@ -364,7 +364,7 @@ section {
 }
 
 .crisis-card {
-    border-top-color: var(--coral);
+    border-top-color: #d35d7e;
 }
 
 .service-card p {
@@ -680,30 +680,30 @@ section {
 
 /* ===== CRISIS BUTTON ===== */
 .btn-crisis, .crisis-btn {
-    background: var(--coral);
+    background: #d35d7e;
     color: var(--white);
     font-weight: 600;
-    box-shadow: 0 4px 12px rgba(192, 72, 115, 0.3);
+    box-shadow: 0 4px 12px rgba(211, 93, 126, 0.3);
 }
 
 .btn-crisis:hover, .crisis-btn:hover {
-    background: #a03d60;
+    background: #b84d6a;
     color: var(--white);
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(192, 72, 115, 0.4);
+    box-shadow: 0 6px 16px rgba(211, 93, 126, 0.4);
 }
 
 /* ===== CRISIS SUPPORT BOX ===== */
 .crisis-support-box {
-    background: linear-gradient(135deg, rgba(192, 72, 115, 0.1), rgba(192, 72, 115, 0.05));
-    border: 2px solid var(--coral);
+    background: linear-gradient(135deg, rgba(211, 93, 126, 0.08), rgba(211, 93, 126, 0.03));
+    border: 2px solid #d35d7e;
     border-radius: 12px;
     padding: 1.5rem;
     margin-top: 2rem;
 }
 
 .crisis-support-box h4 {
-    color: var(--coral);
+    color: #b84d6a;
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
@@ -715,8 +715,12 @@ section {
 }
 
 .crisis-support-box a {
-    color: var(--coral);
+    color: #b84d6a;
     font-weight: 600;
+}
+
+.crisis-support-box a:hover {
+    color: #d35d7e;
 }
 
 /* ===== SERVICE PRICING ===== */
