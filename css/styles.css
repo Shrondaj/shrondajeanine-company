@@ -2,6 +2,8 @@
 :root {
     --primary-color: #166E71;
     --accent-color: #D4DAF37;
+    --gold: #C0A567;
+    --purple: #8b5a8e;
     --coral: #C048473;
     --navy: #2C22A4A;
     --sage: #A8B2A1;
@@ -91,13 +93,13 @@ a:hover {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(135deg, var(--purple), #6b4c6d);
     color: var(--white);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(44, 85, 48, 0.3);
+    box-shadow: 0 4px 12px rgba(139, 90, 142, 0.4);
     color: var(--white);
 }
 
@@ -137,6 +139,8 @@ a:hover {
 .nav-brand {
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 100%;
     gap: 0.5rem;
 }
 
@@ -149,14 +153,14 @@ a:hover {
     font-family: 'Great Vibes', cursive;
     font-size: 1.3em;
     margin: 0 0.15em;
-    color: var(--accent-color);
+    color: var(--gold);
 }
 
 .brand-text {
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
     font-weight: 600;
-    color: var(--accent-color);
+    color: var(--gold);
 }
 
 .nav-menu {
@@ -259,7 +263,7 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(22, 110, 113, 0.85), rgba(168, 178, 161, 0.7));
+    background: linear-gradient(135deg, rgba(139, 90, 142, 0.85), rgba(192, 165, 103, 0.7));
     z-index: -1;
 }
 
@@ -407,7 +411,7 @@ section {
 
 .event-icon {
     font-size: 2.5rem;
-    color: var(--accent-color);
+    color: var(--gold);
     margin-bottom: 1rem;
 }
 
@@ -417,12 +421,18 @@ section {
 }
 
 .events-cta {
-    background: linear-gradient(135deg, var(--primary-color), var(--sage));
+    background: linear-gradient(135deg, var(--purple), #6b4c6d);
     color: var(--white);
     padding: 3rem;
     border-radius: 15px;
     text-align: center;
     margin: 3rem 0;
+    transition: all 0.4s ease;
+}
+
+.events-cta:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 40px rgba(139, 90, 142, 0.3);
 }
 
 .events-cta h3 {
@@ -500,7 +510,7 @@ section {
 }
 
 .contact-value:hover {
-    color: var(--accent-color);
+    color: var(--gold);
 }
 
 /* ===== CONTACT FORM ===== */
@@ -544,7 +554,7 @@ section {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--accent-color);
+    border-color: var(--gold);
     box-shadow: 0 0 0 3px rgba(107, 163, 104, 0.1);
 }
 
@@ -594,7 +604,7 @@ section {
     height: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid var(--accent-color);
+    border: 4px solid var(--gold);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -604,7 +614,7 @@ section {
 }
 
 .footer-brand h3 .brand-ampersand {
-    color: var(--accent-color);
+    color: var(--gold);
 }
 
 .footer-section p {
@@ -682,7 +692,7 @@ section {
     padding: 1.5rem 2rem;
     border-radius: 15px;
     margin: 2rem 0;
-    border-left: 4px solid var(--accent-color);
+    border-left: 4px solid var(--purple);
 }
 
 #daily-affirmation {
@@ -797,7 +807,7 @@ section {
     margin-top: 2rem;
     padding: 1.5rem;
     background: linear-gradient(135deg, rgba(22, 110, 113, 0.05), rgba(168, 178, 161, 0.05));
-    border-left: 4px solid var(--accent-color);
+    border-left: 4px solid var(--purple);
     border-radius: 8px;
 }
 
@@ -816,12 +826,12 @@ section {
 }
 
 .verify-link:hover {
-    color: var(--accent-color);
+    color: var(--gold);
 }
 
 /* ===== TESTIMONIALS ===== */
 .testimonials {
-    background: var(--cream);
+    background: linear-gradient(135deg, rgba(139, 90, 142, 0.05), rgba(192, 165, 103, 0.08));
 }
 
 .testimonials-grid {
@@ -836,11 +846,40 @@ section {
     border-radius: 12px;
     box-shadow: 0 4px 15px var(--shadow);
     position: relative;
-    border-top: 3px solid var(--accent-color);
+    border-top: 3px solid var(--gold);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.testimonial-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.testimonial-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.testimonial-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(139, 90, 142, 0.2);
+    border-top-color: var(--purple);
 }
 
 .testimonial-card .stars {
-    color: var(--accent-color);
+    color: var(--gold);
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
@@ -883,7 +922,7 @@ section {
 
 .tier-card.featured {
     background: linear-gradient(135deg, rgba(22, 110, 113, 0.1), rgba(212, 218, 247, 0.1));
-    border: 2px solid var(--accent-color);
+    border: 2px solid var(--gold);
 }
 
 .tier-title {
@@ -960,7 +999,7 @@ section {
 
 .newsletter-form button {
     padding: 1rem 2rem;
-    background: var(--accent-color);
+    background: var(--gold);
     color: var(--navy);
     border: none;
     border-radius: 8px;
