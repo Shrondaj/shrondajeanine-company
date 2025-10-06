@@ -1,0 +1,411 @@
+/* Abundant Harvest Page Styles */
+
+.ah-hero {
+    background: linear-gradient(135deg, #6b8e23 0%, #556b2f 100%);
+    padding: 8rem 0 4rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.ah-hero h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--gold);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.ah-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.ah-tagline {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-style: italic;
+}
+
+/* About Section */
+.ah-about {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, rgba(192, 165, 103, 0.05), rgba(107, 142, 35, 0.05));
+}
+
+.ah-about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ah-about-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #556b2f;
+    margin-bottom: 2rem;
+}
+
+.ah-about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+
+/* Seasonal Menu Sections */
+.seasonal-menu {
+    padding: 4rem 0;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.seasonal-menu:nth-child(even) {
+    background: linear-gradient(135deg, rgba(192, 165, 103, 0.03), rgba(107, 142, 35, 0.03));
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.spring-menu {
+    animation-delay: 0.2s;
+}
+
+.summer-menu {
+    animation-delay: 0.3s;
+}
+
+.autumn-menu {
+    animation-delay: 0.4s;
+}
+
+.winter-menu {
+    animation-delay: 0.5s;
+}
+
+.season-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.season-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #556b2f;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.season-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), #6b8e23);
+}
+
+.season-tag {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #6b8e23;
+    margin-top: 0.5rem;
+}
+
+/* Menu Grid */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.menu-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-top: 4px solid var(--gold);
+    overflow: hidden;
+}
+
+.menu-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(107, 142, 35, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.menu-card:hover::before {
+    left: 100%;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(107, 142, 35, 0.2);
+    border-top-color: #6b8e23;
+}
+
+.week-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(135deg, var(--gold), #d4a574);
+    color: var(--white);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(192, 165, 103, 0.3);
+}
+
+.menu-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #556b2f;
+    margin: 0 0 0.5rem 0;
+    padding-right: 4rem;
+}
+
+.item-category {
+    color: #6b8e23;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* FAQ Section */
+.ah-faq {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, rgba(192, 165, 103, 0.08), rgba(107, 142, 35, 0.05));
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #556b2f;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), #6b8e23);
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--white);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.faq-item:nth-child(1) { animation-delay: 0.1s; }
+.faq-item:nth-child(2) { animation-delay: 0.15s; }
+.faq-item:nth-child(3) { animation-delay: 0.2s; }
+.faq-item:nth-child(4) { animation-delay: 0.25s; }
+.faq-item:nth-child(5) { animation-delay: 0.3s; }
+.faq-item:nth-child(6) { animation-delay: 0.35s; }
+.faq-item:nth-child(7) { animation-delay: 0.4s; }
+.faq-item:nth-child(8) { animation-delay: 0.45s; }
+
+.faq-item:hover {
+    box-shadow: 0 8px 25px rgba(107, 142, 35, 0.15);
+}
+
+.faq-question {
+    padding: 1.5rem 3rem 1.5rem 1.5rem;
+    cursor: pointer;
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #556b2f;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+    color: #6b8e23;
+}
+
+.faq-question::after {
+    content: '\f078';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gold);
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 1.5rem;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+/* Abundant Harvest Logo Section */
+.ah-logo-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #556b2f 0%, #6b8e23 100%);
+    text-align: center;
+}
+
+.ah-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.ah-logo {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.3));
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.ah-logo-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.ah-logo-text .brand-ampersand {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.3em;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+/* Loading Spinner */
+.loading-container {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(107, 142, 35, 0.1);
+    border-top-color: #6b8e23;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ah-hero {
+        padding: 6rem 0 3rem;
+    }
+
+    .ah-hero h1 {
+        font-size: 3rem;
+    }
+
+    .ah-subtitle {
+        font-size: 1.4rem;
+    }
+
+    .ah-tagline {
+        font-size: 1rem;
+    }
+
+    .ah-about-content h2 {
+        font-size: 2rem;
+    }
+
+    .season-header h2 {
+        font-size: 2rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .faq-question {
+        font-size: 1.1rem;
+        padding-right: 2.5rem;
+    }
+
+    .ah-logo {
+        max-width: 280px;
+    }
+
+    .ah-logo-text {
+        font-size: 0.85rem;
+    }
+}

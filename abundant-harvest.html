@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abundant Harvest Menu - Shronda Jeanine & Company</title>
+    <title>Abundant Harvest - Cottage Food Program</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/abundant-harvest.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Great+Vibes&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
     <header class="header">
         <nav class="nav">
             <div class="container">
-                <div class="nav-brand-center">
+                <div class="nav-brand">
                     <img src="img/logo2.png" alt="Shronda Jeanine & Company" class="logo">
                 </div>
                 <button class="nav-toggle" aria-label="Toggle navigation">
@@ -28,18 +28,31 @@
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="index.html#about" class="nav-link">About</a></li>
                     <li><a href="index.html#services" class="nav-link">Services</a></li>
-                    <li><a href="menu.html" class="nav-link active">Menu</a></li>
+                    <li><a href="abundant-harvest.html" class="nav-link active">Abundant Harvest</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
                     <li><a href="index.html#contact" class="nav-link">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <!-- Menu Hero -->
-    <section class="menu-hero">
+    <!-- Hero -->
+    <section class="ah-hero">
         <div class="container">
             <h1>Abundant Harvest</h1>
-            <p class="menu-subtitle">Seasonal Cottage Food Offerings</p>
+            <p class="ah-subtitle">Cottage Food Program</p>
+            <p class="ah-tagline">Nourishing community through seasonal baked goods & treats</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="ah-about">
+        <div class="container">
+            <div class="ah-about-content">
+                <h2>Welcome to Abundant Harvest</h2>
+                <p>Abundant Harvest is our cottage food program dedicated to creating delicious, homemade baked goods and treats that bring joy and nourishment to our community. Each item is crafted with care using quality ingredients and made with love.</p>
+                <p>As part of SHRONDA JEANINE & COMPANY, our cottage food program extends our mission of healing and community building by providing employment opportunities and fostering connections through the shared experience of food.</p>
+            </div>
         </div>
     </section>
 
@@ -177,6 +190,30 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="ah-faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div id="faq-loading" class="loading-container">
+                <div class="spinner"></div>
+                <p>Loading FAQs...</p>
+            </div>
+            <div id="faq-container" class="faq-container">
+                <!-- FAQs will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Abundant Harvest Logo Section -->
+    <section class="ah-logo-section">
+        <div class="container">
+            <div class="ah-logo-container">
+                <img src="img/abundant-harvest-logo.png" alt="Abundant Harvest Logo" class="ah-logo">
+                <p class="ah-logo-text">A cottage food program by SHRONDA JEANINE <span class="brand-ampersand">&</span> COMPANY</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -223,6 +260,7 @@
         </div>
     </footer>
 
+    <script type="module" src="js/abundant-harvest.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
