@@ -144,16 +144,39 @@ a:hover {
     gap: 0.5rem;
 }
 
-.logo {
-    height: 60px;
-    width: auto;
+.brand-text-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+}
+
+.brand-line-1,
+.brand-line-2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 2px;
+}
+
+.brand-line-1 {
+    font-size: 1.4rem;
+}
+
+.brand-line-2 {
+    font-size: 1.2rem;
 }
 
 .brand-ampersand {
     font-family: 'Great Vibes', cursive;
-    font-size: 1.3em;
-    margin: 0 0.15em;
+    font-size: 2rem;
     color: var(--gold);
+    margin: -0.3rem 0;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
 }
 
 .brand-text {
@@ -1042,12 +1065,24 @@ section {
     .hero-title {
         font-size: 2.5rem;
     }
-    
+
     .hero-actions {
         flex-direction: column;
         gap: 1rem;
     }
-    
+
+    .brand-line-1 {
+        font-size: 1.1rem;
+    }
+
+    .brand-line-2 {
+        font-size: 1rem;
+    }
+
+    .brand-ampersand {
+        font-size: 1.5rem;
+    }
+
     .nav-menu {
         display: none;
         position: absolute;
@@ -1058,21 +1093,26 @@ section {
         flex-direction: column;
         padding: 1rem;
         box-shadow: 0 5px 20px var(--shadow);
+        z-index: 1000;
     }
-    
+
     .nav-menu.active {
         display: flex;
     }
-    
+
     .nav-toggle {
         display: block;
     }
-    
+
     .services-grid,
     .events-grid {
         grid-template-columns: 1fr;
     }
-    
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
     .cta-buttons {
         flex-direction: column;
     }
@@ -1098,5 +1138,52 @@ section {
 
     section {
         padding: 3rem 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.35rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .brand-line-1 {
+        font-size: 1rem;
+    }
+
+    .brand-line-2 {
+        font-size: 0.9rem;
+    }
+
+    .brand-ampersand {
+        font-size: 1.3rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.95rem;
     }
 }
