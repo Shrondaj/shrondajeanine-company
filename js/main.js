@@ -213,7 +213,27 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScroll = currentScroll;
     });
 
-    // ===== ANIMATE CARDS ON SCROLL =====
+    // ===== ANIMATE TESTIMONIALS ON SCROLL =====
+    const testimonialObserverOptions = {
+        threshold: 0.2,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const testimonialObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+            }
+        });
+    }, testimonialObserverOptions);
+
+    // Observe testimonial cards
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    testimonialCards.forEach(card => {
+        testimonialObserver.observe(card);
+    });
+
+    // ===== ANIMATE OTHER CARDS ON SCROLL =====
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
