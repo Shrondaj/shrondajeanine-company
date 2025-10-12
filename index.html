@@ -50,25 +50,20 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Healing Through Community & Compassion</h1>
-                <p class="hero-subtitle">A holistic approach to healing from addiction and trauma, creating pathways to recovery through community, compassion, and connection in Arizona.</p>
-                
-                <!-- Daily Affirmation -->
-                <div class="affirmation-container">
-                    <p id="daily-affirmation">"You are worthy of healing and peace."</p>
-                </div>
-                
-                <div class="hero-actions">
-                    <a href="#services" class="btn btn-primary">Explore Services</a>
-                    <a href="#events" class="btn btn-secondary">Join Community</a>
-                    <a href="tel:602-902-2677" class="btn btn-crisis">Crisis Support</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <<section class="hero">
+  <div class="hero-content">
+    <h1>Welcome to Shronda Jeanine & Company</h1>
+    <p class="tagline">Restoring Wholeness. Building Abundance.</p>
+    <p class="intro">
+      We’re a holistic community action program helping individuals and families heal from grief, trauma, and addiction — while rebuilding lives rooted in love, self-worth, and purpose.
+    </p>
+    <div class="hero-buttons">
+      <a href="services.html" class="btn-primary">Explore Services</a>
+      <a href="community.html" class="btn-secondary">Join the Movement</a>
+    </div>
+  </div>
+</section>
+
 
     <!-- About Section -->
     <section id="about" class="about">
@@ -235,52 +230,73 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2>Community Voices</h2>
-                <p class="section-subtitle">Hear from those who have experienced healing and transformation with us</p>
-            </div>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Shronda Jeanine & Company transformed my life. The holistic approach helped me find peace I never thought possible. The community support made all the difference."</p>
-                    <cite>- Maria G.</cite>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"The group sessions created a safe space for healing. I've found community and support here that extends beyond the sessions. Truly life-changing."</p>
-                    <cite>- James T.</cite>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Professional, compassionate, and truly transformative. The community garden project gave me purpose and connection to nature and others."</p>
-                    <cite>- Sarah K.</cite>
-                </div>
+  <section class="testimonials">
+  <h2>What Our Community Says</h2>
+  <div class="testimonial-slider">
+    <div class="testimonial active">
+      <p>"Shronda Jeanine & Company helped me find peace again after years of struggling. The love and understanding here is unmatched."</p>
+      <span>- Community Member</span>
+    </div>
+    <div class="testimonial">
+      <p>"Through their family circles and coaching, I reconnected with my true self and rebuilt my confidence from the inside out."</p>
+      <span>- Eboni M.</span>
+    </div>
+    <div class="testimonial">
+      <p>"This program is a light for people who’ve been through darkness. I’m forever grateful for the tools and love I found here."</p>
+      <span>- Anonymous</span>
+    </div>
+  </div>
+</section>
 
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"The morning meditation sessions center me for the entire day. Having this consistent support has been crucial to my recovery journey."</p>
-                    <cite>- David L.</cite>
-                </div>
+<style>
+.testimonials {
+  background-color: #f9f6f3;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+.testimonials h2 {
+  font-family: 'Playfair Display', serif;
+  color: #5A3E47;
+}
+.testimonial-slider {
+  position: relative;
+  height: 160px;
+  margin-top: 2rem;
+}
+.testimonial {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transition: opacity 1.2s ease-in-out;
+}
+.testimonial.active {
+  opacity: 1;
+}
+.testimonial p {
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #333;
+}
+.testimonial span {
+  display: block;
+  margin-top: 0.5rem;
+  color: #5A3E47;
+  font-weight: bold;
+}
+</style>
 
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"The monthly mix and mingle events celebrate our progress and keep us motivated. It's wonderful to be part of such a caring community."</p>
-                    <cite>- Angela M.</cite>
-                </div>
+<script>
+let testimonials = document.querySelectorAll('.testimonial');
+let index = 0;
+setInterval(() => {
+  testimonials[index].classList.remove('active');
+  index = (index + 1) % testimonials.length;
+  testimonials[index].classList.add('active');
+}, 5000);
+</script>
 
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"The crisis support saved my life. Having someone available who understands trauma and addiction made the difference when I needed help most."</p>
-                    <cite>- Michael R.</cite>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Support Section -->
     <section id="support" class="support">
